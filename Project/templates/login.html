@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">    <title>Artemis - Home</title>    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="/Users/munna/Downloads/pure-layout-marketing/font-awesome/css/font-awesome.min.css"> -->
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <!-- <link rel="stylesheet" href="css/layouts/marketing.css"> -->
+            <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/marketing.css') }}">
+            <!-- <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/font-awesome.min.css') }}"> -->
+            <!-- <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/font-awesome.css') }}"> -->
+            
+
+        <!--<![endif]-->
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <!-- <a class="pure-menu-heading" src="" href=""><img width="30" height="40" alt="File Icons" class="pure-img-responsive" src="img/common/logofinal.png"></a> -->
+        <a class="pure-menu-heading" href="{{ url_for('home')}}">Artemis</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="{{ url_for('home')}}" class="pure-menu-link">What we do</a></li>
+            <li class="pure-menu-item"><a href="{{ url_for('home')}}" class="pure-menu-link">Clients</a></li>
+            <li class="pure-menu-item"><a href="{{ url_for('home')}}" class="pure-menu-link">Get started</a></li>
+            <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">About us</a></li> -->
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Log In</a></li>
+        </ul>
+    </div>
+</div>
+
+<div align="center" class="new">
+<form>
+  <div class="form-group align">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group align">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="password" type="password" class="form-control" id="pass" placeholder="Password" required>
+  </div>
+  <div></div>
+  <p class="hide">...</p>
+  <button type="submit" class="btn btn-primary align">Submit</button>
+</form>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+     $('form').on('submit', function(event) {
+       $.ajax({
+          data : {
+             email : $('#email').val(),
+             password: $('#pass').val(),
+                 },
+             type : 'POST',
+             url : '/process',
+             success: function(response){
+                console.log(response);
+                window.location = response;
+            }
+            })
+      event.preventDefault();
+      });
+});
+
+</script>
