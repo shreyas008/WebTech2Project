@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">    <title>Artemis - Home</title>    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/Users/munna/Downloads/pure-layout-marketing/font-awesome/css/font-awesome.min.css"> -->
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <!-- <link rel="stylesheet" href="css/layouts/marketing.css"> -->
+            <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/marketing.css') }}">
+            <!-- <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/font-awesome.min.css') }}"> -->
+            <!-- <link rel="stylesheet" href="{{ url_for('static',    filename='css/layouts/font-awesome.css') }}"> -->
+            
+
+        <!--<![endif]-->
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <!-- <a class="pure-menu-heading" src="" href=""><img width="30" height="40" alt="File Icons" class="pure-img-responsive" src="img/common/logofinal.png"></a> -->
+        <a class="pure-menu-heading" href="">Artemis</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#go1" class="pure-menu-link">What we do</a></li>
+            <li class="pure-menu-item"><a href="#go2" class="pure-menu-link">Clients</a></li>
+            <li class="pure-menu-item"><a href="#go3" class="pure-menu-link">Get started</a></li>
+            <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">About us</a></li> -->
+            <li class="pure-menu-item"><a href="{{ url_for('login')}}" class="pure-menu-link">Log In</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container img_cont">
+    <div class="splash">
+        <h1 class="splash-subhead check_">We provide all the analytics you need to get a better understanding of your business and scale it up.</h1>
+       <!--  <p class="splash-subhead">
+            We provide all the analytics you need to get a better understanding of your business and scale it up.
+        </p> -->
+        <p class="button_hover">
+            <a href="http://purecss.io" class="pure-button pure-button-primary check__">Get Started</a>
+        </p>
+    </div>
+    <div align="right" class="new">
+                <img  width="45%" height="50%" alt="File Icons" class="pure-img-responsive" src="/static/img/common/bg2.png" class="img_align">
+    </div>
+</div>
+
+<div class="content-wrapper" id="go1">
+    <div class="content size">
+        <h2 class="content-head is-center">What we do</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <img width="150" height="150" alt="File Icons" class="pure-img-responsive" src="/static/img/common/ana.png" class="img_align">
+
+                <h3 class="content-subhead font-color">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    Data Analysis
+                </h3>
+                <p>
+                    We provide a detailed data analysis by data visualization so you can better understand you business. From bar charts to year on year performance and many more! Find out which clients are most important.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <img width="150" height="150" alt="File Icons" class="pure-img-responsive" src="/static/img/common/cust.png" class="img_align">
+                <h3 class="content-subhead font-color">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    Customization
+                </h3>
+                <p>
+                    We cater to individual customization requests by the client, to custom fit each business individually. We tend to startups and well established brands.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <img width="150" height="150" alt="File Icons" class="pure-img-responsive" src="/static/img/common/ui.png" class="img_align">
+                <h3 class="content-subhead font-color">
+                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    User Experience
+                </h3>
+                <p>
+                    We provide a seamless user experience with our user interface. A easy to use UI to navigate and handle all your data.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <img width="150" height="150" alt="File Icons" class="pure-img-responsive" src="/static/img/common/cus.png" class="img_align">
+                <h3 class="content-subhead font-color">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    Customer Care
+                </h3>
+                <p id="go2">
+                    We provide 24/7 assistance to our clients.  Individual managers are assigned to each client for communincation and to make sure they are happy with our product.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+            <img width="300" alt="File Icons" class="pure-img-responsive" src="/static/img/common/clients.png">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
+            <h2 class="content-head content-head-ribbon">Our Clients</h2>
+
+            <p>
+                Morgan Stanley, Goldman Sachs, Gucci, Zara, Spotify,</br> Twitter, Instagram, Zoom, HouseParty, MRP Shop and many more!
+            </p>
+        </div>
+    </div>
+
+    <div class="content" id="go3">
+        <h2 class="content-head is-center">Choose from our plans</h2>
+
+    <div class="l-content">
+        <div class="pricing-tables pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-free">
+                <div class="pricing-table-header">
+                    <h2><p></p></h2>
+
+                    <span class="pricing-table-price">
+                        $5 <span>per month</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Custom sub-domain</li>
+                    <li>Standard customer support</li>
+                    <li>1GB file storage</li>
+                    <li>10 charts</li>
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-biz pricing-table-selected">
+                <div class="pricing-table-header">
+                    <h2><p></p></h2>
+
+                    <span class="pricing-table-price">
+                        $25 <span>per month</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Use your own domain</li>
+                    <li>Standard customer support</li>
+                    <li>10GB file storage</li>
+                    <li>25 charts</li>
+
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-enterprise">
+                <div class="pricing-table-header">
+                    <h2><p></p></h2>
+
+                    <span class="pricing-table-price">
+                        $45 <span>per month</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Use your own domain</li>
+                    <li>Premium customer support</li>
+                    <li>Unlimited file storage</li>
+                    <li>Unlimited Charts</li>
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+    </div> <!-- end pricing-tables -->
+
+    <div class="information pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="content-subhead font-color">Get started today</h3>
+                <p>
+                    It's a simple 3 step process, get started now by chosing on of our plans. Choose from a varying range of plans to see which one fits you best and join us.
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="content-subhead font-color">Pay monthly or annually</h3>
+                <p>
+                    Pay monthly or anually, your choice! Diffrent payment methods avaliable and cancel any time, no hidden or extra fees, what you see is what you pay.
+                </p>
+            </div>
+        </div>
+
+    <!-- <div class="footer l-box is-center">
+        View the source of this layout to learn more. Made with love by the YUI Team.
+    </div> -->
+
+</div>
+
+
+</body>
+</html>
